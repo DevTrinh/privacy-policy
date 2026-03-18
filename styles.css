@@ -1,0 +1,226 @@
+/* =============================================
+   Privacy Policy — styles.css
+   Clean, minimal, responsive. No framework.
+   ============================================= */
+
+:root {
+  --bg: #f8f8f7;
+  --surface: #ffffff;
+  --border: #e5e5e3;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555550;
+  --text-muted: #888884;
+  --accent: #2563eb;
+  --accent-subtle: #eff6ff;
+  --heading-font: "Inter", system-ui, -apple-system, sans-serif;
+  --body-font: "Inter", system-ui, -apple-system, sans-serif;
+  --radius: 10px;
+  --max-width: 760px;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ---- Base ---- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--body-font);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 1rem 4rem;
+}
+
+/* ---- Layout ---- */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+header {
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+header .app-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+header .meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ---- Table of Contents ---- */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.toc h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.toc ol {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* ---- Sections ---- */
+.policy-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.section-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.policy-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-section p {
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  font-size: 0.9625rem;
+}
+
+.policy-section p:last-child { margin-bottom: 0; }
+
+/* ---- List ---- */
+.policy-section ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.policy-section ul li {
+  padding-left: 1.35rem;
+  position: relative;
+  color: var(--text-secondary);
+  font-size: 0.9625rem;
+}
+
+.policy-section ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  top: 0.2rem;
+}
+
+/* ---- Callout / Note box ---- */
+.callout {
+  background: var(--accent-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ---- Placeholder highlight ---- */
+.placeholder {
+  background: #fef9c3;
+  color: #854d0e;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875em;
+}
+
+/* ---- Footer ---- */
+footer {
+  margin-top: 4rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover { text-decoration: underline; }
+
+/* ---- Divider ---- */
+hr.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  body { padding: 0 0.875rem 3rem; }
+  header { padding: 2rem 0 2rem; }
+  .toc ol { grid-template-columns: 1fr; }
+  .policy-section h2 { font-size: 1.1rem; }
+}
