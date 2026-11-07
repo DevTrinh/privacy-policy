@@ -380,11 +380,26 @@
           Health readings and answers are AI estimates for information only.
         </li>
         <li>
-          <strong>Weather (Open-Meteo):</strong> If you allow location, your approximate location is
-          sent to Open-Meteo to get local weather for watering reminders. If you search for a city
-          instead, the text you type is sent. LeafDoctor does not use precise location. Open-Meteo
-          handles this data under its own
-          <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">terms and privacy policy</a>.
+          <strong>Weather:</strong> If you allow location, your approximate location is sent to a
+          weather service to get local weather for watering reminders. If you search for a city
+          instead, the text you type is sent. LeafDoctor does not use precise location.
+          <ul>
+            <li>LeafDoctor 6.1.6 and later: weather is fetched only while you use the app (reminders use
+              the forecast saved that day). The forecast comes from MET Norway (the Norwegian
+              Meteorological Institute), which receives the approximate location rounded to about
+              1 km and keeps request logs (IP address and coordinates) under its
+              <a href="https://api.met.no/doc/TermsOfService" target="_blank" rel="noopener noreferrer">terms of service</a>.
+              City search sends the city text you type, and showing a place name sends your approximate
+              coordinates, to your device's built-in Android geocoder, which on most devices is provided
+              by Google. Weather data © MET Norway, licensed under
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>;
+              LeafDoctor summarises it (rain and highest temperature for today) and estimates evaporation
+              (ET0) from its temperatures.</li>
+            <li>LeafDoctor 6.1.5 and earlier: forecasts, city search and place names come from
+              Open-Meteo, under its
+              <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">terms and privacy policy</a>.
+              The daily care reminder also refreshes the forecast in the background.</li>
+          </ul>
         </li>
         <li>
           <strong>Plant photos by name (Wikipedia):</strong> When you add a plant by name, the name you
@@ -428,7 +443,7 @@
           <strong>Deleting your data:</strong> Deleting a plant in Garden removes its journal and
           chat. Clearing a Budsy conversation removes its messages and attached photos. Scan history,
           including its photo copies, stays on your device until you clear the app's storage or uninstall
-          the app. Data already processed by Google, Open-Meteo or Wikipedia is kept under their own
+          the app. Data already processed by Google, MET Norway, Open-Meteo or Wikipedia is kept under their own
           policies. For privacy questions or requests about LeafDoctor, email
           <a href="mailto:promptlabs.global.app@gmail.com">promptlabs.global.app@gmail.com</a>.
         </li>
